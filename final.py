@@ -1,6 +1,14 @@
+import sys
+import subprocess
+# implement pip as a subprocess:
+subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'requests'])
+subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'bs4'])
+
 import requests
 import json
+
 import re
+
 from bs4 import BeautifulSoup
 
 url = 'https://www.lawyered.in/legal-disrupt?categoryId='
